@@ -11,7 +11,10 @@ const Card = () => {
     const [value, setValue] = useState(4.7);
     const [view] = useState(1000);
     const [items, setItems] = useState(data)
-
+    const a={
+        float:"left",position:"absolute",backgroundColor: "#254BC9",borderRadius: "10%",right: "5px",top:"5px"
+    }
+  
     return (
         <>
             {items.slice(0, 12).map((element, index) => {
@@ -20,9 +23,22 @@ const Card = () => {
                     <div className="float-md-start col-3 p-1" key={index} >
                         <div className='row'>
                             < div className='col-sm'>
-                                <div className='card border border-white' style={{ backgroundImage: "{image}" }} >
-                                    <img src={image} className="card-img-top" alt="..." />
-                                    <Link to="/" style={{ position: "absolute", color: "white", fontSize: "12px", borderRadius: "15%", paddingLeft: "10px", marginLeft: "230px", marginTop: "5px", backgroundColor: "#254BC9" }} className='btn btn-sm '><AddShoppingCartIcon style={{ fontSize: "14px" }} /><b>Add</b></Link>
+
+                                <div className='card border border-white p-0 m-0' >
+                                    <div className='p-0 m-0'>
+
+                                        <div style={{float:"left"}} >
+                                            <img src={image} className="card-img-top" alt="..." />
+                                        </div>
+
+                                        <div style={a}>
+                                            <Link to="/" className='btn' style={{padding: " 1px 4px",color:"white"}}>
+                                                <AddShoppingCartIcon /><b>ADD</b>
+                                            </Link>
+                                        </div>
+
+                                    </div>
+
 
                                     <div className="text-left ms-1 ">
                                         <h5 className='m-0'>{title}</h5>

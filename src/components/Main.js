@@ -15,9 +15,9 @@ const Main = () => {
         <>
 
             <Header />
-            <div className="row m-0 position-relative " style={{ top: "80px" }}  >
+            <div className="row m-0 position-relative " style={{ top: "90px"}}  >
 
-                <div style={{ float: "left", width: "20%" }}>
+                <div style={{ float: "left", width: "20%",position: "fixed"}}>
                     <div className='row'>
                         <b>Caterory</b>
                         <b style={{ fontSize: "smaller", marginLeft: "10px" }} >Full Avatar</b>
@@ -103,7 +103,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div style={{ float: "left", width: "80%" }}  >
+                <div style={{ float: "left", width: "80%" ,marginLeft: "20%"}}  >
                     <div className="row p-1">
                         <div className='col-2'><h4>All Item</h4></div>
                         <div className='col-8'></div>
@@ -121,7 +121,8 @@ const Main = () => {
                             </div>
                         </div>
                     </div>
-                    <Scrollbars>
+                    <div>
+                    {/* <Scrollbars> */}
                         {fs ? <Card /> : <AllCard />}
                         <div className="text-center p-3">
                             <h2 style={{ width: "42%", float: "left" }}></h2>
@@ -130,7 +131,8 @@ const Main = () => {
                             <Link to="" className=" h2 btn btn-light m-2 p-0" style={{ width: "2%", float: "left" }} onClick={(() => setFs(false))}><b>2</b></Link>
                             <h2 style={{ width: "3%", float: "left", fontSize: "30px" }}>{s2}</h2>
                         </div>
-                    </Scrollbars>
+                        </div>
+                    {/* </Scrollbars> */}
                 </div>
             </div>
         </>

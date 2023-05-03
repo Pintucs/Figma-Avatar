@@ -8,49 +8,59 @@ import logout from "../image/photos/4.png"
 
 const Header = () => {
     const AddAlert = 3
-    const AddShopping = 1
-    const mystyle =
+    const AddShopping = 5
+    const counter =
     {
-        position: "absolute", top: "1px", right: "160px", padding: " 1px 6px", borderRadius: "50%", backgroundColor: "red", color: "white", fontSize: "10px"
+        position: "relative", top: "-50px", padding: " 1px 6px", borderRadius: "50%",
+        backgroundColor: "red", color: "white", fontSize: "15px", left: "25px"
     }
-    const mystyle1 =
-    {
-        position: "absolute", top: "1px", right: "100px", padding: " 1px 6px", borderRadius: "50%", backgroundColor: "red", color: "white", fontSize: "10px"
-    }
-    const ss = {
-        color: "white", height: "50px", width: "29%"
-    }
-    const sss = {
-        width: "45px", paddingLeft: "10px", height: "38px", backgroundColor: "#292727", borderRadius: "20%", marginRight: "10px"
-    }
-    const ssss = {
-        width: "3%", height: "38px", borderRadius: "20%", marginLeft: "10px"
-    }
-
     return (
         <>
-            <nav className='row text-white fixed-top p-2' style={{ backgroundColor: "#3C1773" }}>
+            <nav className='row text-white fixed-top p-0' style={{ backgroundColor: "#3C1773" }}>
+                <div className='p-0 m-2'></div>
+                <div className='col-3'>
+                    <Link to="/" className="navbar-brand"><img src={logo} height="60px" alt="Logo" loading="lazy" /></Link>
+                    </div>
 
-                <Link to="/" className="navbar-brand" style={{ width: "21%" }}><img src={logo} height="50" alt="Logo" loading="lazy" /></Link>
+                <div className='col-3 h3 p-0'>
+                    <Link to="/" className='m-0 p-3' style={{ color: "white"}}>Go To Marketpage</Link>
+                    </div>
 
-                <Link to="/" className=' h4 m-0 p-3' style={ss}>Go To Marketpage</Link>
+                <div className='col-4'>
+                    <div style={{ width: "1%", position: "absolute", marginLeft: "29%" }}>
+                        <span className="fa fa-search form-control-feedback p-2 " style={{ color: "#6A6A6A", fontSize: "20px" }}></span>
+                    </div>
 
-                <Link to="/" className="form-group has-search" style={{ width: "30%" }} ><input type="text" className="form-control" /></Link>
+                    <div style={{ float: "left", width: "100%" }} >
+                        <input type="text" className="form-control" />
+                    </div>
 
-                <Link to="/" style={{ width: "7%" }}><button type="submit" className='btn btn-dark'>Search</button></Link>
+                </div>
 
-                <Link to="/" className='nav-link' style={sss}>
-                    <AddAlertIcon />
-                    <p style={mystyle} >{AddAlert}</p>
-                </Link>
+                <div className='col-2'>
+                    <span className='row'>
+                        <span className='col-2'>
+                            <Link to="/" className='nav-link'>
+                                <AddAlertIcon style={{ borderRadius: "20%", backgroundColor: "black", float: "left", fontSize: "230%" }} />
+                                <i style={counter}>{AddAlert}</i>
 
-                <Link to="/" className='nav-link' style={sss}>
-                    <AddShoppingCartIcon />
-                    <p style={mystyle1} >{AddShopping}</p>
-                </Link>
-
-                <Link to="/" className='nav-link ' style={ssss}><img src={logout} alt="logout" loading="lazy" style={{ borderRadius: "20%", height: "38px" }} /></Link>
-
+                            </Link>
+                        </span>
+                        <span className='col-1 p-0 m-1'></span>
+                        <span className='col-2'>
+                            <Link to="/" className='nav-link'>
+                                <AddShoppingCartIcon style={{ borderRadius: "20%", backgroundColor: "black", fontSize: "230%" }} />
+                                <i style={counter}>{AddShopping}</i>
+                            </Link>
+                        </span>
+                        <span className='col-1 p-0 m-1'></span>
+                        <span className='col-2'>
+                            <Link to="https://onlineresto.netlify.app" className='nav-link '>
+                                <img src={logout} alt="logout" loading="lazy" style={{ borderRadius: "20%", height: "38px" }} />
+                            </Link>
+                        </span>
+                    </span>
+                </div>
             </nav>
 
         </>
