@@ -7,6 +7,7 @@ const AddToCard = () => {
         <>
             <Header />
             <h1>Welcome</h1>
+            <h3>My name is Pintu Kumar vishvakarma</h3>
 
         </>
 
